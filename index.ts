@@ -3,7 +3,6 @@ import './style.css';
 
 // Wir laden p5js
 import p5 = require('p5');
-import { drawCircle } from './circle';
 import { setup, draw, keyPressed, mousePressed } from './code';
 
 // Wir informieren p5js, welche Funktionen unser Programm bereitstellt.

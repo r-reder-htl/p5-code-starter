@@ -1,4 +1,5 @@
 import { p } from './index';
+import { drawCircle } from './circle';
 
 export function setup() {
   // Diese Funktion wird einmal beim Programmstart aufgerufen.
@@ -30,8 +31,19 @@ export function draw() {
   // https://p5js.org/reference/#/p5/draw
   p.background('yellow');
 
-  // Beispiel für Aufruf einer Hilfsfunktion in einer anderen Datei.
+  // Beispiel zeichne ein Rectangle
+  p.push();
+
+  // translate to where you want the center of the ellipse to be
+  //p.translate(p.width / 2, p.height / 2);
+  p.translate(40, 40);
+
+  // rotate using the frameCount (increases by one on each frame)
+  p.rotate(p.frameCount * 0.025);
+
   p.stroke('red');
   p.fill('green');
-  p.rect(0, 0, 40, 40);
+  p.rect(-20, -20, 40, 40);
+  p.pop();
+  drawCircle({ x: 200, y: 100 });
 }
